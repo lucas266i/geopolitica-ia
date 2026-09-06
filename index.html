@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Geopolítica IA</title>
+  <meta name="description" content="Panel de inteligencia geopolítica">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span>🌎</span><strong>GEOPOLÍTICA IA</strong></div>
+    <button id="refresh" class="button">Actualizar</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">CENTRO DE INTELIGENCIA</p>
+      <h1>Situación geopolítica mundial</h1>
+      <p class="muted">Primera versión conectada a Supabase. Aquí construiremos progresivamente el sistema de noticias, países, conflictos y eventos.</p>
+    </section>
+
+    <section class="stats">
+      <article><span>📡</span><b id="sourceCount">—</b><small>Fuentes</small></article>
+      <article><span>📰</span><b id="articleCount">—</b><small>Noticias</small></article>
+      <article><span>⚠️</span><b id="eventCount">—</b><small>Eventos</small></article>
+    </section>
+
+    <nav class="tabs">
+      <button class="tab active" data-view="news">Noticias</button>
+      <button class="tab" data-view="events">Eventos</button>
+      <button class="tab" data-view="sources">Fuentes</button>
+    </nav>
+
+    <section id="news" class="view active">
+      <div class="section-head"><h2>Últimas noticias</h2></div>
+      <div id="articles" class="cards"><div class="empty">Todavía no hay noticias. El siguiente módulo será el recolector de fuentes.</div></div>
+    </section>
+
+    <section id="events" class="view">
+      <div class="section-head"><h2>Eventos importantes</h2></div>
+      <div id="eventsList" class="cards"><div class="empty">Todavía no hay eventos.</div></div>
+    </section>
+
+    <section id="sources" class="view">
+      <div class="section-head"><h2>Fuentes configuradas</h2></div>
+      <div id="sourcesList" class="cards"></div>
+    </section>
+
+    <div id="status" class="status">Conectando con Supabase…</div>
+  </main>
+
+  <footer>Geopolítica IA · V1 · Infraestructura gratuita</footer>
+  <script>
+    window.SUPABASE_URL = "https://yqlvwklvyfpeptevpnul.supabase.co";
+    window.SUPABASE_ANON_KEY = "sb_publishable_WolZRmSJfaBZXgSjtDzHZw_94-NU93i";
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
